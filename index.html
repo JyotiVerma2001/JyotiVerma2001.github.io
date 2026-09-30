@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Jyoti Verma — French &amp; Bilingual Customer Experience</title>
+<meta name="description" content="Jyoti Verma — bilingual French–English customer experience professional in Gurugram, India, working across support, quality assurance and new-hire mentoring." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FBFAFA;
+    --bg-alt:#F4F0F1;
+    --ink:#1C1719;
+    --muted:#6B6166;
+    --line:#E8E1E3;
+    --accent:#8A2344;
+    --accent-soft:#F7E9EE;
+    --card:#FFFFFF;
+    --radius:14px;
+    --maxw:1100px;
+    --serif:"Instrument Serif","Iowan Old Style","Palatino Linotype",Georgia,serif;
+    --sans:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#161214;--bg-alt:#1E181B;--ink:#F4EEF0;--muted:#B0A3A9;--line:#33292E;
+      --accent:#EE8FAD;--accent-soft:#3A1E29;--card:#1C1619;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#161214;--bg-alt:#1E181B;--ink:#F4EEF0;--muted:#B0A3A9;--line:#33292E;
+    --accent:#EE8FAD;--accent-soft:#3A1E29;--card:#1C1619;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg);}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+  body{
+    background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.6;transition:background .2s ease,color .2s ease;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-underline-offset:3px;}
+  img,svg{max-width:100%;display:block;}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  @media (max-width:560px){.wrap{padding:0 20px;}}
+  section{padding:96px 0;}
+  section + section{border-top:1px solid var(--line);}
+  @media (max-width:560px){section{padding:64px 0;} .hero{padding-bottom:64px;}}
+
+  /* language switching: the whole page swaps */
+  html.lang-fr .en{display:none !important;}
+  html:not(.lang-fr) .fr{display:none !important;}
+
+  /* top bar */
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:28px 32px;max-width:var(--maxw);margin:0 auto;}
+  @media (max-width:560px){.topbar{padding:20px;}}
+  .mark{font-family:var(--serif);font-size:26px;line-height:1;color:var(--ink);text-decoration:none;}
+  .controls{display:flex;gap:10px;align-items:center;}
+  .lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:var(--card);padding:3px;}
+  .lang-switch button{
+    border:0;background:transparent;color:var(--muted);font:600 13px/1 var(--sans);
+    padding:7px 13px;border-radius:999px;cursor:pointer;
+  }
+  .lang-switch button[aria-pressed="true"]{background:var(--accent);color:#fff;}
+  :root[data-theme="dark"] .lang-switch button[aria-pressed="true"]{color:#1C1719;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lang-switch button[aria-pressed="true"]{color:#1C1719;}}
+  .mode-toggle{
+    border:1px solid var(--line);background:var(--card);color:var(--muted);
+    font:500 13px/1 var(--sans);padding:10px 15px;border-radius:999px;cursor:pointer;
+  }
+  .mode-toggle:hover,.lang-switch button:hover{color:var(--ink);}
+  .lang-switch button[aria-pressed="true"]:hover{color:#fff;}
+
+  /* hero */
+  .hero{padding-top:56px;padding-bottom:88px;}
+  .greeting{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,28px);color:var(--accent);}
+  h1.name{font-family:var(--serif);font-weight:400;font-size:clamp(60px,11vw,128px);line-height:.95;letter-spacing:-0.015em;margin-top:6px;}
+  .role{font-size:clamp(17px,2vw,20px);font-weight:600;margin-top:22px;max-width:40ch;}
+  .tagline{font-size:17px;color:var(--muted);max-width:58ch;margin-top:12px;}
+  .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;list-style:none;}
+  .facts li{font-size:13.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--card);}
+  .facts li.open{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px;align-items:center;}
+  .btn{
+    display:inline-block;padding:12px 22px;border-radius:10px;font-size:14.5px;font-weight:600;
+    border:1px solid var(--line);color:var(--ink);background:var(--card);text-decoration:none;
+  }
+  .btn:hover{border-color:var(--muted);}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+  :root[data-theme="dark"] .btn.primary{color:#1C1719;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#1C1719;}}
+  .btn.primary:hover{opacity:.9;}
+
+  /* section headings */
+  .eyebrow{font-size:14px;font-weight:600;color:var(--accent);}
+  h2.section-title{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,46px);line-height:1.1;letter-spacing:-0.005em;margin-top:8px;max-width:24ch;}
+
+  /* focus areas */
+  .work{display:grid;grid-template-columns:1fr;gap:28px;padding:44px 0;border-top:1px solid var(--line);}
+  .work:first-of-type{border-top:none;margin-top:28px;}
+  @media(min-width:860px){
+    .work{grid-template-columns:1.05fr 1fr;align-items:center;gap:48px;}
+    .work.reverse .work-media{order:2;}
+  }
+  .work-media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--bg-alt);padding:8px;}
+  .work-media svg{width:100%;height:auto;}
+  .d-node{fill:var(--card);stroke:var(--line);stroke-width:1.2;}
+  .d-node.hi{fill:var(--accent-soft);stroke:var(--accent);stroke-opacity:.35;}
+  .d-t{font:600 15px var(--sans);fill:var(--ink);}
+  .d-s{font:400 12.5px var(--sans);fill:var(--muted);}
+  .d-cap{font:italic 16px var(--serif);fill:var(--accent);}
+  .d-line{stroke:var(--muted);stroke-width:1.5;stroke-opacity:.7;}
+  .d-head{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .work-body h3{font-size:22px;font-weight:700;letter-spacing:-0.01em;}
+  .badge{
+    display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+    margin-left:10px;vertical-align:middle;position:relative;top:-2px;
+    background:var(--accent-soft);color:var(--accent);
+  }
+  .work-body p{color:var(--muted);margin-top:10px;font-size:15.5px;max-width:60ch;}
+  .work-body ul{margin-top:12px;padding-left:20px;color:var(--muted);font-size:15px;}
+  .work-body li{margin-top:6px;}
+  .work-body ul.tags{padding-left:0;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;list-style:none;}
+  .tag{font-size:12.5px;color:var(--muted);border:1px solid var(--line);padding:4px 10px;border-radius:999px;}
+
+  /* languages */
+  .langs{display:grid;grid-template-columns:1fr;gap:0;margin-top:44px;border-top:1px solid var(--line);}
+  .lang-row{display:grid;grid-template-columns:1fr;gap:6px 32px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  @media(min-width:760px){.lang-row{grid-template-columns:220px 180px 1fr;}}
+  .lang-name{font-family:var(--serif);font-size:36px;line-height:1;}
+  .lang-level{font-weight:600;font-size:15px;}
+  .lang-note{color:var(--muted);font-size:15px;}
+  .cefr{display:flex;gap:6px;margin-top:12px;list-style:none;}
+  .cefr li{font-size:12px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px;}
+  .cefr li.reached{background:var(--accent-soft);color:var(--accent);border-color:transparent;}
+  .cefr li.current{background:var(--accent);color:#fff;border-color:var(--accent);}
+  :root[data-theme="dark"] .cefr li.current{color:#1C1719;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cefr li.current{color:#1C1719;}}
+
+  /* skills */
+  .skills-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-top:56px;}
+  @media(min-width:700px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:980px){.skills-grid{grid-template-columns:repeat(4,1fr);}}
+  .skill-cat h4{font-size:14px;font-weight:700;color:var(--accent);}
+  .skill-cat ul{list-style:none;margin-top:12px;}
+  .skill-cat li{font-size:15px;padding:5px 0;}
+
+  /* experience */
+  .job{padding:28px 0;display:grid;grid-template-columns:1fr;gap:6px;margin-top:28px;}
+  @media(min-width:760px){.job{grid-template-columns:240px 1fr;gap:32px;}}
+  .job-meta h4{font-size:17px;font-weight:700;}
+  .job-meta .dates{font-size:14px;color:var(--muted);margin-top:4px;}
+  .job-role{font-size:16px;font-weight:600;margin-bottom:6px;}
+  .job-detail ul{padding-left:20px;color:var(--muted);font-size:15.5px;}
+  .job-detail li{margin-top:9px;}
+
+  /* education timeline */
+  .timeline{list-style:none;margin-top:44px;position:relative;}
+  .timeline li{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line);}
+  .timeline li:first-child{border-top:none;}
+  .timeline .yr{font-family:var(--serif);font-size:26px;line-height:1.1;color:var(--accent);}
+  .timeline .what{font-weight:600;font-size:16px;}
+  .timeline .where{color:var(--muted);font-size:14.5px;}
+  .extra{display:grid;grid-template-columns:1fr;gap:28px;margin-top:56px;}
+  @media(min-width:760px){.extra{grid-template-columns:1fr 1fr;}}
+  .extra-card{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);padding:24px;}
+  .extra-card h4{font-size:14px;font-weight:700;color:var(--accent);}
+  .extra-card p{margin-top:8px;font-size:15.5px;}
+  .extra-card p.sub{color:var(--muted);font-size:14.5px;margin-top:4px;}
+
+  /* contact */
+  .contact-list{list-style:none;margin-top:18px;}
+  .contact-list li{color:var(--muted);font-size:15.5px;padding:3px 0;}
+  .contact-list a{color:var(--ink);}
+  footer{padding:40px 32px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line);}
+
+  .todo{font-size:12px;color:var(--muted);border:1px dashed var(--line);padding:2px 8px;border-radius:5px;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="mark" href="#top" aria-label="Jyoti Verma, back to top">JV</a>
+  <div class="controls">
+    <div class="lang-switch" role="group" aria-label="Language / Langue">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <button class="mode-toggle" id="modeToggle" type="button"><span class="en">Dark mode</span><span class="fr" lang="fr">Mode sombre</span></button>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <p class="greeting"><span class="en">Hello, I'm</span><span class="fr" lang="fr">Bonjour, je suis</span></p>
+  <h1 class="name">Jyoti Verma</h1>
+  <p class="role">
+    <span class="en">French language &amp; bilingual customer experience professional</span>
+    <span class="fr" lang="fr">Spécialiste de la langue française et de l'expérience client bilingue</span>
+  </p>
+  <p class="tagline">
+    <span class="en">I support French- and English-speaking customers over chat and email, audit service quality, and help new team members find their feet. This page is available in both languages; use the switch at the top.</span>
+    <span class="fr" lang="fr">J'accompagne les clients francophones et anglophones par chat et par e-mail, j'audite la qualité de service et j'aide les nouveaux collaborateurs à prendre leurs marques. Cette page existe en deux langues : utilisez le sélecteur en haut de page.</span>
+  </p>
+  <ul class="facts">
+    <li><span class="en">Gurugram, Haryana, India</span><span class="fr" lang="fr">Gurugram, Haryana, Inde</span></li>
+    <li><span class="en">French B2</span><span class="fr" lang="fr">Français B2</span></li>
+    <li><span class="en">English fluent</span><span class="fr" lang="fr">Anglais courant</span></li>
+    <li><span class="en">Hindi native</span><span class="fr" lang="fr">Hindi langue maternelle</span></li>
+    <li class="open"><span class="en">Open to French CX, training, QA and localization roles</span><span class="fr" lang="fr">Ouverte aux postes en relation client, formation, qualité et localisation</span></li>
+  </ul>
+  <div class="cta-row">
+    <a class="btn primary" href="assets/Jyoti_Verma-CV.pdf" download><span class="en">Download CV</span><span class="fr" lang="fr">Télécharger le CV</span></a>
+    <a class="btn" href="mailto:Varmajyoti674@gmail.com"><span class="en">Email me</span><span class="fr" lang="fr">M'écrire</span></a>
+    <a class="btn" href="tel:+918448443943"><span class="en">Call</span><span class="fr" lang="fr">Appeler</span></a>
+    <a class="btn" href="https://www.linkedin.com/in/jyoti-verma-51342b254">LinkedIn</a>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">What I do</span><span class="fr" lang="fr">Ce que je fais</span></p>
+    <h2 class="section-title">
+      <span class="en">Support, quality and coaching, in two languages.</span>
+      <span class="fr" lang="fr">Support, qualité et accompagnement, en deux langues.</span>
+    </h2>
+
+    <article class="work">
+      <div class="work-media"><svg viewBox="0 0 520 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow: a French or English message is understood and resolved, answered in the customer's language, meeting SLA and satisfaction targets">
+<defs><marker id="arra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" class="d-head"/></marker></defs>
+<rect class="d-node hi" x="30" y="44" width="200" height="76" rx="12"/>
+<text class="d-t en" x="130.0" y="78.0" text-anchor="middle">Customer message</text><text class="d-t fr" lang="fr" x="130.0" y="78.0" text-anchor="middle">Message client</text>
+<text class="d-s en" x="130.0" y="98.0" text-anchor="middle">French or English</text><text class="d-s fr" lang="fr" x="130.0" y="98.0" text-anchor="middle">En français ou en anglais</text><rect class="d-node" x="290" y="44" width="200" height="76" rx="12"/>
+<text class="d-t en" x="390.0" y="78.0" text-anchor="middle">Understand &amp; resolve</text><text class="d-t fr" lang="fr" x="390.0" y="78.0" text-anchor="middle">Analyse et résolution</text>
+<text class="d-s en" x="390.0" y="98.0" text-anchor="middle">Chat, email, CRM</text><text class="d-s fr" lang="fr" x="390.0" y="98.0" text-anchor="middle">Chat, e-mail, CRM</text><rect class="d-node" x="290" y="200" width="200" height="76" rx="12"/>
+<text class="d-t en" x="390.0" y="234.0" text-anchor="middle">Reply in their language</text><text class="d-t fr" lang="fr" x="390.0" y="234.0" text-anchor="middle">Réponse dans sa langue</text>
+<text class="d-s en" x="390.0" y="254.0" text-anchor="middle">Clear, on-tone, accurate</text><text class="d-s fr" lang="fr" x="390.0" y="254.0" text-anchor="middle">Claire, juste, au bon ton</text><rect class="d-node" x="30" y="200" width="200" height="76" rx="12"/>
+<text class="d-t en" x="130.0" y="234.0" text-anchor="middle">Targets met</text><text class="d-t fr" lang="fr" x="130.0" y="234.0" text-anchor="middle">Objectifs atteints</text>
+<text class="d-s en" x="130.0" y="254.0" text-anchor="middle">SLA, quality, CSAT</text><text class="d-s fr" lang="fr" x="130.0" y="254.0" text-anchor="middle">SLA, qualité, CSAT</text><line class="d-line" x1="232" y1="82" x2="284" y2="82" marker-end="url(#arra)"/><line class="d-line" x1="390" y1="122" x2="390" y2="194" marker-end="url(#arra)"/><line class="d-line" x1="288" y1="238" x2="236" y2="238" marker-end="url(#arra)"/>
+
+</svg></div>
+      <div class="work-body">
+        <h3><span class="en">Bilingual customer support</span><span class="fr" lang="fr">Support client bilingue</span><span class="badge"><span class="en">Current</span><span class="fr" lang="fr">En cours</span></span></h3>
+        <p class="en">Resolving customer concerns over chat and email in French and English, including complex cases, in a fast-paced BPO environment at Foundever.</p>
+        <p class="fr" lang="fr">Résolution des demandes clients par chat et par e-mail, en français et en anglais, y compris les cas complexes, dans l'environnement BPO exigeant de Foundever.</p>
+        <ul class="en">
+          <li>Consistently meeting SLAs, quality standards and customer satisfaction targets</li>
+          <li>Complaint resolution and clear client communication in both languages</li>
+          <li>Multiple performance awards for service excellence</li>
+        </ul>
+        <ul class="fr" lang="fr">
+          <li>Respect constant des SLA, des standards qualité et des objectifs de satisfaction client</li>
+          <li>Traitement des réclamations et communication claire dans les deux langues</li>
+          <li>Plusieurs prix de performance pour l'excellence du service</li>
+        </ul>
+        <ul class="tags en"><li class="tag">French</li><li class="tag">English</li><li class="tag">Chat</li><li class="tag">Email</li><li class="tag">CRM &amp; ticketing</li><li class="tag">Complaint resolution</li></ul>
+        <ul class="tags fr" lang="fr"><li class="tag">Français</li><li class="tag">Anglais</li><li class="tag">Chat</li><li class="tag">E-mail</li><li class="tag">CRM et ticketing</li><li class="tag">Gestion des réclamations</li></ul>
+      </div>
+    </article>
+
+    <article class="work reverse">
+      <div class="work-media"><svg viewBox="0 0 520 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cycle: sample agent interactions, audit them, calibrate with the QA team, share feedback in daily huddles, repeat">
+<defs><marker id="arrb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" class="d-head"/></marker></defs>
+<rect class="d-node hi" x="30" y="44" width="200" height="76" rx="12"/>
+<text class="d-t en" x="130.0" y="78.0" text-anchor="middle">Sample interactions</text><text class="d-t fr" lang="fr" x="130.0" y="78.0" text-anchor="middle">Échantillon d'interactions</text>
+<text class="d-s en" x="130.0" y="98.0" text-anchor="middle">Chat and call</text><text class="d-s fr" lang="fr" x="130.0" y="98.0" text-anchor="middle">Chat et téléphone</text><rect class="d-node" x="290" y="44" width="200" height="76" rx="12"/>
+<text class="d-t en" x="390.0" y="78.0" text-anchor="middle">Audit</text><text class="d-t fr" lang="fr" x="390.0" y="78.0" text-anchor="middle">Audit</text>
+<text class="d-s en" x="390.0" y="98.0" text-anchor="middle">Hygiene, auto-fail, executive</text><text class="d-s fr" lang="fr" x="390.0" y="98.0" text-anchor="middle">Hygiène, auto-fail, exécutif</text><rect class="d-node" x="290" y="200" width="200" height="76" rx="12"/>
+<text class="d-t en" x="390.0" y="234.0" text-anchor="middle">Calibrate</text><text class="d-t fr" lang="fr" x="390.0" y="234.0" text-anchor="middle">Calibrage</text>
+<text class="d-s en" x="390.0" y="254.0" text-anchor="middle">Align scoring with QA</text><text class="d-s fr" lang="fr" x="390.0" y="254.0" text-anchor="middle">Harmoniser la notation</text><rect class="d-node" x="30" y="200" width="200" height="76" rx="12"/>
+<text class="d-t en" x="130.0" y="234.0" text-anchor="middle">Daily huddle</text><text class="d-t fr" lang="fr" x="130.0" y="234.0" text-anchor="middle">Briefing quotidien</text>
+<text class="d-s en" x="130.0" y="254.0" text-anchor="middle">Trends and best practice</text><text class="d-s fr" lang="fr" x="130.0" y="254.0" text-anchor="middle">Tendances, bonnes pratiques</text><line class="d-line" x1="232" y1="82" x2="284" y2="82" marker-end="url(#arrb)"/><line class="d-line" x1="390" y1="122" x2="390" y2="194" marker-end="url(#arrb)"/><line class="d-line" x1="288" y1="238" x2="236" y2="238" marker-end="url(#arrb)"/><line class="d-line" x1="130" y1="198" x2="130" y2="126" stroke-dasharray="5 5" marker-end="url(#arrb)"/>
+<text class="d-cap en" x="260" y="316" text-anchor="middle">Repeats through peak operations</text><text class="d-cap fr" lang="fr" x="260" y="316" text-anchor="middle">Répété pendant les pics d'activité</text>
+</svg></div>
+      <div class="work-body">
+        <h3><span class="en">Quality assurance</span><span class="fr" lang="fr">Assurance qualité</span><span class="badge"><span class="en">Peak operations</span><span class="fr" lang="fr">Pics d'activité</span></span></h3>
+        <p class="en">Selected to support the QA team during peak operations: auditing agent interactions and turning findings into feedback the team could act on.</p>
+        <p class="fr" lang="fr">Sélectionnée pour renforcer l'équipe qualité pendant les pics d'activité : audit des interactions des conseillers et retours concrets à l'équipe.</p>
+        <ul class="en">
+          <li>Quality audits of agent interactions across chat and call channels</li>
+          <li>Hygiene audits, auto-fail reviews and executive case audits</li>
+          <li>Calibration sessions with the QA team</li>
+          <li>Daily huddles sharing quality trends, best practices and actionable feedback</li>
+        </ul>
+        <ul class="fr" lang="fr">
+          <li>Audits qualité des interactions des conseillers, par chat et par téléphone</li>
+          <li>Audits d'hygiène, revues des erreurs éliminatoires (auto-fail) et audits de dossiers exécutifs</li>
+          <li>Sessions de calibrage avec l'équipe qualité</li>
+          <li>Briefings quotidiens sur les tendances qualité, les bonnes pratiques et les axes de progrès</li>
+        </ul>
+        <ul class="tags en"><li class="tag">QA audits</li><li class="tag">Calibration</li><li class="tag">Process improvement</li><li class="tag">Performance feedback</li></ul>
+        <ul class="tags fr" lang="fr"><li class="tag">Audits qualité</li><li class="tag">Calibrage</li><li class="tag">Amélioration continue</li><li class="tag">Retours de performance</li></ul>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="work-media"><svg viewBox="0 0 520 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow: new hire receives process training, real-time query support, audits of their interactions, then structured feedback">
+<defs><marker id="arrc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" class="d-head"/></marker></defs>
+<rect class="d-node hi" x="30" y="44" width="200" height="76" rx="12"/>
+<text class="d-t en" x="130.0" y="78.0" text-anchor="middle">Process training</text><text class="d-t fr" lang="fr" x="130.0" y="78.0" text-anchor="middle">Formation processus</text>
+<text class="d-s en" x="130.0" y="98.0" text-anchor="middle">First days on the floor</text><text class="d-s fr" lang="fr" x="130.0" y="98.0" text-anchor="middle">Premiers jours en production</text><rect class="d-node" x="290" y="44" width="200" height="76" rx="12"/>
+<text class="d-t en" x="390.0" y="78.0" text-anchor="middle">Live query support</text><text class="d-t fr" lang="fr" x="390.0" y="78.0" text-anchor="middle">Soutien en direct</text>
+<text class="d-s en" x="390.0" y="98.0" text-anchor="middle">Real-time answers</text><text class="d-s fr" lang="fr" x="390.0" y="98.0" text-anchor="middle">Réponses en temps réel</text><rect class="d-node" x="290" y="200" width="200" height="76" rx="12"/>
+<text class="d-t en" x="390.0" y="234.0" text-anchor="middle">Interaction audits</text><text class="d-t fr" lang="fr" x="390.0" y="234.0" text-anchor="middle">Audits d'interactions</text>
+<text class="d-s en" x="390.0" y="254.0" text-anchor="middle">Chat and email reviews</text><text class="d-s fr" lang="fr" x="390.0" y="254.0" text-anchor="middle">Revues chat et e-mail</text><rect class="d-node" x="30" y="200" width="200" height="76" rx="12"/>
+<text class="d-t en" x="130.0" y="234.0" text-anchor="middle">Structured feedback</text><text class="d-t fr" lang="fr" x="130.0" y="234.0" text-anchor="middle">Retours structurés</text>
+<text class="d-s en" x="130.0" y="254.0" text-anchor="middle">What to keep, what to fix</text><text class="d-s fr" lang="fr" x="130.0" y="254.0" text-anchor="middle">Points forts, axes d'amélioration</text><line class="d-line" x1="232" y1="82" x2="284" y2="82" marker-end="url(#arrc)"/><line class="d-line" x1="390" y1="122" x2="390" y2="194" marker-end="url(#arrc)"/><line class="d-line" x1="288" y1="238" x2="236" y2="238" marker-end="url(#arrc)"/>
+
+</svg></div>
+      <div class="work-body">
+        <h3><span class="en">Onboarding &amp; mentoring</span><span class="fr" lang="fr">Intégration et mentorat</span><span class="badge"><span class="en">Current</span><span class="fr" lang="fr">En cours</span></span></h3>
+        <p class="en">Helping new hires get up to speed on process and quality, from their first training session to their first audited customer interactions.</p>
+        <p class="fr" lang="fr">Accompagner les nouvelles recrues sur les processus et la qualité, de la première formation à leurs premières interactions clients auditées.</p>
+        <ul class="en">
+          <li>Process training for new team members</li>
+          <li>Real-time help with live customer queries</li>
+          <li>Auditing new-hire interactions and giving structured performance feedback</li>
+        </ul>
+        <ul class="fr" lang="fr">
+          <li>Formation aux processus pour les nouveaux membres de l'équipe</li>
+          <li>Aide en temps réel sur les demandes clients en cours</li>
+          <li>Audit des interactions et retours structurés sur la performance</li>
+        </ul>
+        <ul class="tags en"><li class="tag">New hire onboarding</li><li class="tag">Mentoring &amp; coaching</li><li class="tag">Process training</li></ul>
+        <ul class="tags fr" lang="fr"><li class="tag">Intégration des recrues</li><li class="tag">Mentorat et coaching</li><li class="tag">Formation aux processus</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="languages">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Languages &amp; skills</span><span class="fr" lang="fr">Langues et compétences</span></p>
+    <h2 class="section-title">
+      <span class="en">Three languages, and the everyday tools of a support team.</span>
+      <span class="fr" lang="fr">Trois langues, et les outils du quotidien d'une équipe support.</span>
+    </h2>
+
+    <div class="langs">
+      <div class="lang-row">
+        <div class="lang-name"><span class="en">French</span><span class="fr" lang="fr">Français</span></div>
+        <div class="lang-level">B2 <span class="en">· Advanced</span><span class="fr" lang="fr">· Avancé</span></div>
+        <div>
+          <p class="lang-note"><span class="en">Advanced Diploma in French, University of Delhi. Master's in French in progress. Used daily with customers over chat and email.</span><span class="fr" lang="fr">Diplôme avancé de français, Université de Delhi. Master de français en cours. Pratiqué au quotidien avec les clients, par chat et par e-mail.</span></p>
+          <ul class="cefr" aria-label="CEFR level B2">
+            <li class="reached">A1</li><li class="reached">A2</li><li class="reached">B1</li><li class="current">B2</li><li>C1</li><li>C2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lang-row">
+        <div class="lang-name"><span class="en">English</span><span class="fr" lang="fr">Anglais</span></div>
+        <div class="lang-level"><span class="en">Fluent</span><span class="fr" lang="fr">Courant</span></div>
+        <p class="lang-note"><span class="en">B.A. (Honours) in English, University of Delhi.</span><span class="fr" lang="fr">Licence (Honours) d'anglais, Université de Delhi.</span></p>
+      </div>
+      <div class="lang-row">
+        <div class="lang-name">Hindi</div>
+        <div class="lang-level"><span class="en">Native</span><span class="fr" lang="fr">Langue maternelle</span></div>
+        <p class="lang-note"><span class="en">First language.</span><span class="fr" lang="fr">Première langue.</span></p>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <h4><span class="en">Customer experience</span><span class="fr" lang="fr">Expérience client</span></h4>
+        <ul class="en"><li>Bilingual support (EN &amp; FR)</li><li>Chat &amp; email support</li><li>Complaint resolution</li><li>Client communication</li></ul>
+        <ul class="fr" lang="fr"><li>Support bilingue (FR et EN)</li><li>Support par chat et e-mail</li><li>Gestion des réclamations</li><li>Communication client</li></ul>
+      </div>
+      <div class="skill-cat">
+        <h4><span class="en">Quality &amp; training</span><span class="fr" lang="fr">Qualité et formation</span></h4>
+        <ul class="en"><li>Quality assurance</li><li>Process improvement</li><li>New hire onboarding</li><li>Mentoring &amp; coaching</li><li>Performance feedback</li></ul>
+        <ul class="fr" lang="fr"><li>Assurance qualité</li><li>Amélioration des processus</li><li>Intégration des recrues</li><li>Mentorat et coaching</li><li>Retours de performance</li></ul>
+      </div>
+      <div class="skill-cat">
+        <h4><span class="en">Professional</span><span class="fr" lang="fr">Savoir-être</span></h4>
+        <ul class="en"><li>Cross-cultural communication</li><li>Stakeholder management</li><li>Problem solving</li><li>Team collaboration</li><li>Adaptability</li></ul>
+        <ul class="fr" lang="fr"><li>Communication interculturelle</li><li>Gestion des parties prenantes</li><li>Résolution de problèmes</li><li>Travail d'équipe</li><li>Adaptabilité</li></ul>
+      </div>
+      <div class="skill-cat">
+        <h4><span class="en">Tools</span><span class="fr" lang="fr">Outils</span></h4>
+        <ul class="en"><li>Microsoft Office (Word, Excel, Outlook)</li><li>Google Workspace</li><li>CRM &amp; ticketing systems</li></ul>
+        <ul class="fr" lang="fr"><li>Microsoft Office (Word, Excel, Outlook)</li><li>Google Workspace</li><li>CRM et outils de ticketing</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Experience</span><span class="fr" lang="fr">Expérience</span></p>
+    <h2 class="section-title"><span class="en">Where I've done this.</span><span class="fr" lang="fr">Là où je l'ai fait.</span></h2>
+
+    <div class="job">
+      <div class="job-meta">
+        <h4>Foundever</h4>
+        <div class="dates"><span class="en">Oct 2024 to present</span><span class="fr" lang="fr">Oct. 2024 à aujourd'hui</span></div>
+        <div class="dates"><span class="en">Delhi NCR, India</span><span class="fr" lang="fr">Delhi NCR, Inde</span></div>
+      </div>
+      <div class="job-detail">
+        <div class="job-role"><span class="en">Customer Service Representative, French &amp; English</span><span class="fr" lang="fr">Conseillère clientèle, français et anglais</span></div>
+        <ul class="en">
+          <li>Delivered bilingual (French &amp; English) customer support across chat and email, consistently meeting SLAs, quality standards and customer satisfaction targets.</li>
+          <li>Selected to support the QA team during peak operations, auditing agent interactions across chat and call channels, joining calibration sessions and identifying improvement opportunities.</li>
+          <li>Performed hygiene audits, auto-fail reviews and executive case audits to ensure compliance with quality standards and improve agent performance.</li>
+          <li>Facilitated daily team huddles to communicate quality trends, share best practices and give actionable feedback.</li>
+          <li>Mentored and onboarded new hires through process training, real-time query support, interaction audits and structured performance feedback.</li>
+          <li>Received multiple performance awards for consistently high-quality service and customer satisfaction.</li>
+        </ul>
+        <ul class="fr" lang="fr">
+          <li>Support client bilingue (français et anglais) par chat et par e-mail, avec un respect constant des SLA, des standards qualité et des objectifs de satisfaction client.</li>
+          <li>Sélectionnée pour renforcer l'équipe qualité pendant les pics d'activité : audits des interactions par chat et par téléphone, participation aux sessions de calibrage et identification d'axes d'amélioration.</li>
+          <li>Réalisation d'audits d'hygiène, de revues auto-fail et d'audits de dossiers exécutifs pour garantir la conformité aux standards qualité et améliorer la performance des conseillers.</li>
+          <li>Animation de briefings d'équipe quotidiens pour partager les tendances qualité, les bonnes pratiques et des retours concrets.</li>
+          <li>Mentorat et intégration des nouvelles recrues : formation aux processus, aide en temps réel, audits d'interactions et retours structurés.</li>
+          <li>Plusieurs prix de performance pour la qualité constante du service et la satisfaction client.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Education</span><span class="fr" lang="fr">Formation</span></p>
+    <h2 class="section-title"><span class="en">An English degree, then French, step by step.</span><span class="fr" lang="fr">Des études d'anglais, puis le français, étape par étape.</span></h2>
+
+    <ol class="timeline">
+      <li>
+        <div class="yr">2022</div>
+        <div><div class="what"><span class="en">B.A. (Honours) in English</span><span class="fr" lang="fr">Licence (Honours) d'anglais</span></div><div class="where"><span class="en">University of Delhi</span><span class="fr" lang="fr">Université de Delhi</span></div></div>
+      </li>
+      <li>
+        <div class="yr">—</div>
+        <div><div class="what"><span class="en">Certificate in French, then Diploma in French</span><span class="fr" lang="fr">Certificat de français, puis Diplôme de français</span></div><div class="where"><span class="en">University of Delhi</span><span class="fr" lang="fr">Université de Delhi</span></div></div>
+      </li>
+      <li>
+        <div class="yr">2024</div>
+        <div><div class="what"><span class="en">Advanced Diploma in French (B2)</span><span class="fr" lang="fr">Diplôme avancé de français (B2)</span></div><div class="where"><span class="en">University of Delhi</span><span class="fr" lang="fr">Université de Delhi</span></div></div>
+      </li>
+      <li>
+        <div class="yr">2026</div>
+        <div><div class="what"><span class="en">M.A. in French, expected</span><span class="fr" lang="fr">Master de français, obtention prévue</span></div><div class="where"><span class="en">Indira Gandhi National Open University (IGNOU)</span><span class="fr" lang="fr">Université nationale ouverte Indira Gandhi (IGNOU)</span></div></div>
+      </li>
+    </ol>
+
+    <div class="extra">
+      <div class="extra-card">
+        <h4><span class="en">Recognition</span><span class="fr" lang="fr">Distinction</span></h4>
+        <p><span class="en">Advanced Certificate of Recognition, Bande Dessinée</span><span class="fr" lang="fr">Certificat de reconnaissance avancé, bande dessinée</span></p>
+        <p class="sub"><span class="en">Francophonie Day 2024</span><span class="fr" lang="fr">Journée de la Francophonie 2024</span></p>
+      </div>
+      <div class="extra-card">
+        <h4><span class="en">Outside work</span><span class="fr" lang="fr">En dehors du travail</span></h4>
+        <p><span class="en">Reading and sketching</span><span class="fr" lang="fr">Lecture et dessin</span></p>
+              </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Get in touch</span><span class="fr" lang="fr">Contact</span></p>
+    <h2 class="section-title"><span class="en">Let's talk, in English or en français.</span><span class="fr" lang="fr">Parlons-en, en français ou in English.</span></h2>
+    <ul class="contact-list">
+      <li><a href="mailto:Varmajyoti674@gmail.com">Varmajyoti674@gmail.com</a></li>
+      <li><a href="tel:+918448443943">+91 84484 43943</a></li>
+      <li><span class="en">Gurugram, Haryana, India</span><span class="fr" lang="fr">Gurugram, Haryana, Inde</span></li>
+    </ul>
+    <div class="cta-row" style="margin-top:28px;">
+      <a class="btn primary" href="mailto:Varmajyoti674@gmail.com"><span class="en">Email me</span><span class="fr" lang="fr">M'écrire</span></a>
+      <a class="btn" href="assets/Jyoti_Verma-CV.pdf" download><span class="en">Download CV</span><span class="fr" lang="fr">Télécharger le CV</span></a>
+      <a class="btn" href="https://www.linkedin.com/in/jyoti-verma-51342b254">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Jyoti Verma.</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var modeBtn = document.getElementById('modeToggle');
+  var langBtns = document.querySelectorAll('.lang-switch button');
+
+  function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+  function read(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+
+  function isDark(){
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function paintMode(){
+    var dark = isDark();
+    modeBtn.querySelector('.en').textContent = dark ? 'Light mode' : 'Dark mode';
+    modeBtn.querySelector('.fr').textContent = dark ? 'Mode clair' : 'Mode sombre';
+  }
+  function applyTheme(t){ root.setAttribute('data-theme', t); store('jv-theme', t); paintMode(); }
+  modeBtn.addEventListener('click', function(){ applyTheme(isDark() ? 'light' : 'dark'); });
+
+  function applyLang(l){
+    root.classList.toggle('lang-fr', l === 'fr');
+    root.setAttribute('lang', l);
+    langBtns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang === l ? 'true' : 'false'); });
+    document.title = l === 'fr'
+      ? 'Jyoti Verma — Français et expérience client bilingue'
+      : 'Jyoti Verma — French & Bilingual Customer Experience';
+    store('jv-lang', l);
+  }
+  langBtns.forEach(function(b){ b.addEventListener('click', function(){ applyLang(b.dataset.lang); }); });
+
+  var savedTheme = read('jv-theme');
+  if (savedTheme === 'dark' || savedTheme === 'light') root.setAttribute('data-theme', savedTheme);
+  paintMode();
+  var savedLang = read('jv-lang');
+  var urlLang = (location.hash === '#fr') ? 'fr' : null;
+  applyLang(urlLang || savedLang || 'en');
+})();
+</script>
+</body>
+</html>
